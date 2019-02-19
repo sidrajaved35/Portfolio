@@ -1,0 +1,3 @@
+document.getElementById('info-name').textContent = stateData[selected].name;
+document.getElementById('info-facts').textContent = stateData[selected].abbr;
+document.getElementById('info-capitol').textContent = stateData[selected].capitol;

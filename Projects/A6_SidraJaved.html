@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Video Watcher</title>
+  <link rel="stylesheet" href="http://www.teaching-materials.org/common/css/bootstrap.min.css">
+  <style type="text/css">
+    #videos-list img {
+    display: block;
+  }
+  
+  </style>
+ </head>
+ <body>
+<div class="container">
+ <div class="row">
+   <div class="col-md-12">
+    <h2 class="page-header">Best Videos Ever ❤ </br></script>
+
+
+<a data-pin-do="buttonFollow" href="https://www.pinterest.com/pinterest/" ><img src="https://addons.opera.com/media/extensions/55/19155/1.1-rev1/icons/icon_64x64.png" width="50" height="50"></a>
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+      <a href="https://twitter.com/intent/tweet?text=YOUR+QUOTE+HERE"
+   class="btn btn-info btn-lg"
+   target="_blank">Tweet It!</a><br>
+
+
+      <script>!function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+          js     = d.createElement(s);
+          js.id  = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      }(document, "script", "twitter-wjs");</script></h2>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-md-3">
+     <ul id="videos-list">
+    </ul>
+   </div>
+   <div class="col-md-9" id="video-watcher">
+   </div>
+ </div>
+ <div style="text-align:center; margin-top: 30px; clear:both;">
+  <a href="https://info.flagcounter.com/nEFy"><img src="https://s04.flagcounter.com/count/nEFy/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/" alt="Flag Counter" border="0"></a>
+</div>
+</div>
+  <script type="text/javascript" src="http://www.teaching-materials.org/common/youtube.js"></script>
+  <script type="text/javascript" src="http://www.teaching-materials.org/common/js/jquery.min.js"></script>
+ <script>
+ function addVideoToList(video) {
+    var videoLink = $('<a>');
+    videoLink.append(video.title);
+    var linkUrl = videoLink.attr('href');
+    var thumbnailUrl = youtube.generateThumbnailUrl(video.youtubeId);
+    var thumbnailImg = $('<img>');
+    thumbnailImg.attr('src', thumbnailUrl);
+    videoLink.append(thumbnailImg);
+    videoLink.on('click', function(e) {
+        e.preventDefault();
+        var videoTitle = $('<h2>');
+        videoTitle.html(video.title + ' <small> ' + video.author + ' </small> ' + ' <small> '  + video.rating +' </small> ');
+        var videoEmbed = $('<iFrame></iFrame>');
+        videoEmbed.attr('src', youtube.generateEmbedUrl(video.youtubeId) + '?autoplay=1');
+        videoEmbed.attr('width', 560);
+        videoEmbed.attr('height', 315);
+        var videoRating = $('<img></img>');
+        videoRating.attr('src', 'https://chart.googleapis.com/chart?chs=225x125&cht=gom&chd=t:' + video.rating);
+        var videoWatcher = $('#video-watcher');
+        videoWatcher.hide();
+        videoWatcher.empty();
+        videoWatcher.append(videoTitle);
+        videoWatcher.append(videoEmbed);
+        videoWatcher.append(videoRating);
+        videoWatcher.fadeIn();
+    });
+    var videoItem = $('<li>');
+    videoItem.append(videoLink);
+    $('#videos-list').append(videoItem);
+ }
+var videos = [
+  
+ {"youtubeId": "mjFXxHDbhus",
+    "title": "BIRD BOX Official Trailer (2018)",
+    "author": "ONE Media",
+    "rating":  840494
+  },
+   {"youtubeId": "Gz3yak1cl-8",
+    "title": "Last To Leave Circle Wins $10,000",
+    "author": "MrBeast",
+    "rating":  22601281
+  },
+  {"youtubeId": "lidznGlh7fw",
+    "title": "Top 10 BEST Walt Disney World Secrets",
+    "author": "TPMvids",
+    "rating":  1015189
+  },
+  {"youtubeId": "LKqwTraI-rU",
+    "title": "Man vs. Elephant!",
+    "author": "Brave Wilderness",
+    "rating": 221110
+  },
+  {"youtubeId": "49a3RfG31P8",
+    "title": "HAUNTED VILLAGE : I Did My Halloween Makeup In Sleepy Hollow",
+    "author": "Glam&Gore",
+    "rating": 2042451
+  },
+  {"youtubeId": "mZqqfSWvVVE",
+    "title": " My Husky thinks she is my babies Mum!!",
+    "author": "milperthusky",
+    "rating": 681052
+  }
+]
+for (var i = 0; i < videos.length; i++) {
+   addVideoToList(videos[i]);
+}
+ </script>
+</body>
+</html>

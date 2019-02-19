@@ -1,0 +1,114 @@
+body {
+	color: white;
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.65em;
+	font-weight: 300;
+	line-height: 1.6;
+	margin: 0;
+}
+
+a {
+color:  blue;
+text-decoration: underline;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  display: inline-block;
+  margin: 0 0.5px;
+  text-decoration: none;
+  color: #d2cdcd;
+}
+
+a:hover {
+  padding-bottom: 20px;
+  color: #d0461cfa;
+}
+button:hover{
+	opacity: 0.7;
+}
+
+.container {
+	margin: 0 auto 20px;
+	max-width: 700px;
+	padding: 50px;
+	text-align:center;
+}
+h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 24px;
+	font-family: 'Lora', serif;
+	padding:5px;
+	margin-top: 117px;
+	letter-spacing:8px;
+}
+h1 + p {
+	margin-top: 10px;
+}
+.animated {
+            animation:opac 5s}
+			@keyframes opac{
+				from{opacity:0} to
+				{opacity:1} ;
+			}
+}
+.a{
+	color:#f05f40;
+	-webkit-transition:all .2s;
+	transition:all .2s;
+	}
+
+
+
+.container5 {
+  position: relative;
+  width: 50%;
+}
+
+.image5 {
+  display: block;
+  width: 400px;;
+  height:250px;;
+}
+
+.overlay5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #d0461cfa;
+ 
+ 
+  transition: .5s ease;
+
+}
+
+.container5:hover .overlay5 {
+ opacity:1;
+}
+
+.text5 {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#div2{
+background-image: url("../img/icon.png") ;
+ height:53px;
+ width:53px;
+ position:absolute;
+ margin-left:800px;
+ }
+

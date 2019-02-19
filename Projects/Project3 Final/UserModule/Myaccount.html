@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+
+.tab {
+    overflow: hidden;
+   font-family:  'Crimson Text', serif;
+    background-color: #f48fb1;
+}
+
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 26px;
+	font-family:  'Crimson Text', serif;
+}
+
+
+.tab button:hover {
+    background-color:#f53c82;
+	color: white;
+}
+
+
+.tab button.active {
+    background-color: #f53c82;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+	font-size:25px;
+	font-family:  'Crimson Text', serif;
+}
+
+p{
+font-size:22px;
+
+}
+body{
+background-image:url("backgroundhomepage2.jpg");
+background-size:120%;
+
+}
+</style>
+</head>
+<body>
+
+<h2><b>Welcome</b>  back Bibata.</h2>
+<br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Overview</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">My Profile</button>
+</div>
+
+<b><div id="London" class="tabcontent">
+  <p><h3>My Phonic Wireless</h3> </p>
+  <p><h3>(347)666-7777</h3></p>
+  <p>Your plan</p>
+  <p> Pay as you go $40</p>
+  <p>Last Day of service</p>
+  <p>12/17/2018</p>
+  <p><img src="data.png"></p>
+</div></b>
+
+<b><div id="Paris" class="tabcontent">
+  <p><h3>Contact Information</h3><p/>
+  <hr>
+  <p>First Name: &nbsp &nbsp &nbsp &nbsp Bibata</p>
+  <p>Last Name: &nbsp &nbsp &nbsp &nbsp Rabba </p>
+  <p>Email address:  &nbsp  myemail.gmail.com</p>
+  <p>Contact Number: &nbsp (347)666-7777</p>
+ 
+
+</div></b>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>

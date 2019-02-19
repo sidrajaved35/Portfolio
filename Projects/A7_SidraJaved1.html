@@ -1,0 +1,197 @@
+
+<html>
+
+  <head>
+    <title>
+      Lab : JQuery Animation 
+    </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+#divv{
+    width: 200px;
+height: 200px;
+position: relative; /* Box would not move with out being absolute or relative*/
+
+background-color: #FA6900;
+border-radius: 5px;
+text-align: center;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="../../theme.css">
+<link rel="icon" type="image/png" href="../../Images/fav2.png">
+  </head>
+
+    <body>
+
+<center>
+    <br>
+    <h1>
+            Lab : JQuery Animation
+    </h1>
+    <h3> date </h3>
+    <hr>
+    <br>
+
+<table width="65%">
+<tr>
+<td align="center">
+<p> Here, I will use JQuery to manipulate the CSS and make an animation to the box. Click the button to try it!</p>
+</td>
+</tr>
+</table>
+
+<div id="divv"></div>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<p>Click the Buttons!</p>
+<br>
+
+<br>
+
+ <button class="button" onclick="move()">Move right!</button>
+ <button class="button6" onclick="size1()">Move Left!</button>
+ <button  class="button1" id="b2" onclick="opa()">Change Opacity!</button>
+   <button class="button2" onclick="cir()">Into a Circle!</button>
+    <button class="button3" onclick="change()">Change the Size!</button>
+
+
+    <button class="button4" onclick="size()">Lets Get Crazyy!</button>
+	<button class="button5" onclick="size2()">Original</button>
+	
+	<button class="button7" onclick="size1()">Move Top!</button>
+	<button class="button8" onclick="size3()">Move Bottom!</button>
+	
+	
+      </div>
+
+                <br>
+                <br>
+<br>
+
+</center>
+<script> 
+function move(){
+    
+       
+		var div = $("div");
+		div.animate({right: '500px' },1000);
+		div.animate({left: '50px' },1000);
+		position: relative;
+		
+    }
+
+</script>
+
+<script> 
+$(document).ready(function(){
+    $(".button1").click(function(){
+        $("div").animate({
+            opacity: '0.5'
+            
+			},1000);
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $(".button3").click(function(){
+        $("div").animate({
+            
+            height: '+=150px',
+            width: '+=150px'
+        },1000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $(".button2").click(function () {
+  $("div").animate({
+    "border-radius": "70%"
+  },1000);  
+  });
+});
+  </script>
+  
+<script> 
+$(document).ready(function(){
+    $(".button4").click(function(){
+	var div = $("div");
+     $("div").animate({ right: '250px'},1000);
+		div.animate({	left: '100px'},1000);
+		div.animate({	height: '300px'},1000);
+        div.animate({   width: '150px'},1000);
+		div.animate({	height: '150px'},1000);
+		div.animate({ "border-radius": "75%"},1000);
+		div.animate({ "border-radius": "5%"},1000);
+        });
+    });
+</script> 
+  <script> 
+$(document).ready(function(){
+    $(".button5").click(function(){
+	location.reload();
+	});
+	});
+</script>
+	
+
+<script> 
+$(document).ready(function(){
+    $(".button6").click(function(){
+	var div = $("div");
+		div.animate({left: '250px' },1000);
+		div.animate({right: '50px' },1000);
+		position: relative;
+    });
+});
+</script>
+
+<script> 
+$(document).ready(function(){
+    $(".button7").click(function(){
+       
+		
+		$("div").animate({bottom: '150px' },1000);
+		
+    });
+});
+</script>
+
+<script> 
+$(document).ready(function(){
+    $(".button8").click(function(){
+       
+		
+		$("div").animate({top: '150px' },1000);
+		position: relative;
+    });
+});
+
+</script>
+<script>
+
+$(document).ready(function() {
+
+            $("#button").click(function(){
+               $(".target").effect( "bounce", {times:3}, 300 );
+});
+ });
+		
+</script>
+<script>
+   $("#stop").click(function(){
+        $("#divv").stop();
+    });
+})
+ </script>
+</body>
+</html>

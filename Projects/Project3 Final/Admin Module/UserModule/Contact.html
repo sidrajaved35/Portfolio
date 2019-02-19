@@ -1,0 +1,91 @@
+<html>
+
+<head></head>
+<style>
+body{
+background-image:url('backgroundhomepage2.jpg' );
+background-size:1500px 1300px;
+}
+ p{
+color:#f5417e;
+
+} h1{ 
+color:#f5417e;
+
+}h2 {color:#f5417e;
+}
+h3{color:#f5417e;}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	font-family:  'Crimson Text', serif;
+}
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f53c82;
+}
+.button:hover {
+    background-color: #f53c82;
+    color: white;
+}
+
+</style>
+<body>
+<center>
+<form id="Form"><br><br>
+<h1>CONTACT US</h1>
+<h2> Send us an Email so that we can assist you with your inquiries</h2>
+<h3> NAME*: <input type="text" id="text" ><br>
+<h3>EMAIL* : <input type="text" id="email"><br>
+<h3>PHONE* : <input type="number" id="phone" ><br>
+<h3>SUBJECT* :  <input type="text" id="subject" ><br>
+<h3>MESSAGE* : </h3><textarea rows="4" cols="50" id="textarea">
+
+</textarea><br><br>
+<input type="button" class="button" value="SUBMIT COMMENT"  onClick="comment()"><br><br>
+<h2>Call Us</h2>
+
+<h2>1 800-584-4569</h2>
+</center>
+</form>
+<script>
+
+    function comment(){
+    
+        var a=document.forms["Form"]["text"].value;
+        var b=document.forms["Form"]["email"].value;
+        var c=document.forms["Form"]["phone"].value;
+        var d=document.forms["Form"]["subject"].value;
+        if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
+        {
+            alert("Please Fill All Required Field");
+            return false;
+        }
+    
+
+else{
+
+alert("Your Message has been send. Thankyou");
+window.location=("index.html");
+}
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

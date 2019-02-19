@@ -1,0 +1,87 @@
+<!--Sidra javed-->
+<html>
+<head>
+  <title>Assignment1</title>
+  </head>
+  <style>
+body{
+background: url(../img/12.jpg) no-repeat ;
+background-size: 2000px 1100px;
+     border: 10px solid black;
+    outline: #62cea5 solid 10px;
+    margin: auto;    
+    padding: 30px;
+    text-align: center;
+  background-color: lightblue;
+  font-size:20px;
+  color: white;
+}
+
+legend
+{
+  margin-bottom:0px;
+  margin-left:16px;
+}
+.button {
+    background-color: #62cea5;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 6px 2px;
+    cursor: pointer;
+}
+.btn2{
+font-size:20px;
+margin: 6px 2px;
+text-align:center;
+}
+p ,h1{
+color:#62cea5;
+font-size:25px;
+}
+
+</style>
+
+<body >
+   <center> <h1 style="font-size:40px" > Fortune teller</h1> <hr>
+   <form id="futureForm">
+     <p> First Name:</p>
+      <input type="text" class="btn2" name="fName"  id="fName" value="" >
+       <p> Partner Name:</p>
+        <input type="text" class="btn2" name="Pnamew"  id="Pname" value="">
+        <p> kids:</p>
+        <input type="number" class="btn2" name="numChildrenn" id="numChildren" value="" >
+       <p> location:</p>
+        <input type="text" class="btn2" name="loc" id="loc1" value="">
+       <p> Job Title:</p>
+        <input type="text" class="btn2" name="job" id="jobt" value=""><br>
+</fieldset>
+
+<br>
+<input type="button" class="button"  value="Get your fortune" onclick="future()"></button>
+<P id="demo" style="font-size:35px; font-style=bold; color:#62cea5" >Your fortune will appear here</p></center>
+<script>
+function future(){
+  var a=document.forms["futureForm"]["fName"].value;
+    var b=document.forms["futureForm"]["Pname"].value;
+      var c=document.forms["futureForm"]["numChildren"].value;
+        var d=document.forms["futureForm"]["loc1"].value;
+          var e=document.forms["futureForm"]["jobt"].value;
+          var greet="Hi "+a;
+          var kids=" you will have "+c+" kids";
+          var cople= " and married to "+ b;
+          var location=" while working as "+e+ " in "+d +".";
+            var message=greet+kids+cople+location;
+          document.getElementById('demo').innerHTML=message;
+}
+
+
+
+
+</script>
+</form>
+</body>
+</html>

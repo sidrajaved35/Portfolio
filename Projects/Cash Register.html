@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head><title>Cash Register</title></head>
+
+<style>
+body {
+    background-image: url("http://savonfoodssupermarket.com/wp-content/uploads/2017/06/iStock-516554842-768x600.jpg");
+    background-repeat: no-repeat;
+	background-size: 2000px 1000px;
+	 line-height: 2;
+	 font-family: Batang;
+	
+	}
+ul{
+	font-size:22px;
+  top: 50px;
+  margin: 25px;
+  padding: 0px;
+  height: 24px;
+  }
+
+form { 
+	margin: 0 auto;
+	font-size: 20px;
+	}
+legend{
+	margin-bottom:16px;
+	margin-left:16px;
+	}
+
+p {
+    font-size: 20px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+</style>
+<body>
+<h1  style="font-size:3vw";><b><center> <u>Cash Register</u></h1></center>
+
+
+ <h1><u>Fruits Price:</u></h1>
+
+ <ul >
+<li> Banana:      $0.80 lb</li>
+ <li>Apple:      $.99 lb</li> 
+ <li> Grapes:    $ 2.99 lb</li> 
+  <li>kiwi:      $ 0.99 lb</li> 
+  <li>Necterine: $ 1.50 lb</li> 
+ <li> Mangoes:   $1.99 each</li> 
+ </ul>
+
+
+
+
+</p>
+<center>
+<form id="cash" ><legend><fieldset style="width:300px" height:"800px">
+<h3><u>Shopping Cart</h3></u>
+Banana:    <input type="number" name="banana" ><br>
+Apple:     <input type="number" name="apple" ><br>
+Grapes:    <input type="number" name="grapes" ><br>
+Kiwi:      <input type="number" name="kiwi" ><br>
+Necterine: <input type="number" name="Necterine" ><br>
+Mangoes:   <input type="number" name="Mangoes" ><br>
+
+
+<input type="button"  class="button" value="Calculate" onclick="cart()"></button>
+
+</legend>
+</form></fieldset></center>
+
+
+<p id="demo"></p>
+
+  <script>
+  function cart(){
+ var banana= document.forms["cash"]["banana"].value;
+ var Apple=document.forms["cash"]["apple"].value;
+ var Grapes=document.forms["cash"]["grapes"].value;
+  var kiwi=document.forms["cash"]["kiwi"].value;
+  var necterine=document.forms["cash"]["Necterine"].value;
+  var mangoes=document.forms["cash"]["Mangoes"].value;
+  
+  
+ var  total= Number.parseFloat(banana*0.80)+Number.parseFloat(Apple*0.99)+Number.parseFloat(Grapes*4.99)+Number.parseFloat(kiwi*1.99)+Number.parseFloat(necterine*3.50)+Number.parseFloat(mangoes*1.99);   
+  
+  
+alert("Total total price of things in shopping cart is  "+total);
+ 
+  
+}
+
+
+
+   
+  </script></b>
+  </body>
+</html>

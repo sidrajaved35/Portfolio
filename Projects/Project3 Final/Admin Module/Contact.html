@@ -1,0 +1,57 @@
+<html>
+
+<head></head>
+<style>
+
+body{
+color:blue;
+}
+</style>
+<body style="background-image:url('backgroundhomepage.jpg' )" >
+<center>
+<form id="Form">
+<h1>CONTACT US</h1>
+<h2> Send us an Email so that we can assist you with your inquiries</h2>
+<h3> NAME*: <input type="text" id="text" ><br>
+<h3>EMAIL* : <input type="text" id="email"><br>
+<h3>PHONE* : <input type="number" id="phone" ><br>
+<h3>SUBJECT* :  <input type="text" id="subject" ><br>
+<h3>MESSAGE* : </h3><textarea rows="4" cols="50" id="textarea">
+
+</textarea><br><br>
+<input type="button" value="SUBMIT COMMENT"  onClick="comment()"><br><br>
+<h2>Call Us</h2>
+
+1 800-584-4569
+</center>
+</form>
+<script>
+
+    function comment(){
+    
+        var a=document.forms["Form"]["text"].value;
+        var b=document.forms["Form"]["email"].value;
+        var c=document.forms["Form"]["phone"].value;
+        var d=document.forms["Form"]["subject"].value;
+        if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
+        {
+            alert("Please Fill All Required Field");
+            return false;
+        }
+    
+
+else{
+
+alert("Your Message has been send. Thankyou");
+window.location=("UserModule/index.html");
+}
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

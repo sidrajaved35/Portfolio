@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  background-image:url("backgroundhomepage2.jpg");
+  background-size:cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #ff92b7;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	font-family:  'Crimson Text', serif;
+}
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f53c82;
+}
+.button:hover {
+    background-color: #f53c82;
+    color: white;
+}
+
+
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<center>
+<h1>Recharge Your Account</h1>
+<h4>Enter Your Wireless Number</h4>
+<input type="number"  id="num1" placeholder="111-222-3333"><br><br>
+
+
+<h3>Choose Plan</h3>
+
+<form action="/action_page.php">
+  <input type="radio" name="gender"class="bigg" value="Monthly Unlimited"> Monthly Unlimited
+  <input type="radio" class="bigg" name="gender" value="Pay As You Go">Pay As You Go
+  <input type="radio" class="bigg"name="gender" value="Multiline"> Multi Line<br>  <br>
+  <form><h3>Choose Value</h3>
+  <form action="/action_page.php">
+  <input type="radio" name="gender2"class="bigg" value="$60"> $60
+  <input type="radio" class="bigg" name="gender2" value="$50">$50
+  <input type="radio" class="bigg"name="gender2" value="$40">$40  
+   <input type="radio" class="bigg"name="gender2" value="$30">$30  
+    <input type="radio" class="bigg"name="gender2" value="$20">$20  
+  <form>
+  
+	   
+  </div>
+</div>
+
+  <br><br>
+  <input class="button" type="button" value="CONTINUE" id="btn3" ><br><br>
+</center>
+ <div class="col-25">
+   <center> <div class="container">
+      <h4>Total <span class="price" style="color:black"> </span></h4>
+     
+      <hr>
+      <p><span class="price" style="color:black"><b>
+	  <p id='demo3'></b></span></p></p>
+	  <p id='demo2'></p>
+	  <p id='demo'></p>
+	
+    </div>
+  </div><br><br>
+  
+  
+  
+ <center> <a href="#credit"><input class="button" type="button" value="PAY WITH CREDIT OR DEBIT"></a>  
+ 
+ <br><br><br><br><br><img src="recharge.jpg"></center><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br<br><br><br><br><br><br<div class="col-75">
+    <div id="credit"class="container">
+      <form action="/action_page.php" id="paymentForm">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <center><input class="button" type="button"  onclick="validate()" value="Continue to checkout" ></center>
+      </form>
+    </div>
+  </div>
+ 
+</div>
+<script>
+$(document).ready(function(){
+$("#btn3").click(function(){
+var total=num1.value;
+if (total.length<10){
+alert("Invalid Number Please try Again");
+
+
+}
+else
+
+document.getElementById('demo3').innerHTML=("<b>PHONE NUMBER: </b> " +total);
+
+});
+});
+$(document).ready(function(){
+   $("#btn3").click(function(){
+   var radioValue = $("input[name='gender2']:checked").val();
+            
+              document.getElementById("demo").innerHTML=("<b>AMOUNT: </b> " +radioValue);
+           });
+			});
+</script>
+<script>
+$(document).ready(function(){
+   $("#btn3").click(function(){
+   var radioValue = $("input[name='gender']:checked").val();
+            
+              document.getElementById("demo2").innerHTML=( "<b>PLAN: </b> "+radioValue);
+           });
+			});
+</script>
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<script>
+function validate(){
+var valuee=document.getElementById("ccnum").value;
+if(document.getElementById("fname").value=="")
+{
+    alert("Cannot be left Empty")}
+
+
+else if(document.getElementById("expyear").value==""){
+alert("cannot be left empty")}
+
+ else if( (valuee%2!=0)||(valuee.length<16)||valuee==null) { 
+  alert(" Credit Card is Invalid");}
+ else{
+  alert("Your Phone has been sucessfully recharged.");
+  window.location="index.html"
+  }
+ 
+}
+</script>
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

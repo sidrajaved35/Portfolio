@@ -1,0 +1,44 @@
+/* CSS layout */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	min-width: 600px;
+}
+
+#left_col {
+	float: left;
+	width: 300px;
+}
+
+#right_col {
+	float: right;
+	width: 100px;
+}
+
+#page_content {
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+#container {
+	
+	background-image: url('image1.jpg');
+	background-repeat: no-repeat;
+	width: 1024px;
+	height: 800px;
+	margin-right: 50px;
+	margin-left: 350px;
+}
+body {
+	margin: 30px;
+	padding: 10px;
+	text-align: center;
+	font-family: "Monotype Corsiva";
+	font-size: 35px;
+	color: #691b35;
+	background-color: #691b35;
+	
+}

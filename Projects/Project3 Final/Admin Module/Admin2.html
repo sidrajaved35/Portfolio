@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<title>Admin Mode</title>
+<head>
+
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="Admin2.js"></script>
+<link rel="stylesheet" type="text/css" href="Admin2.css">.
+
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+</head>
+<body >
+<script src="state-data1.js"></script>
+<img class="img2"src="logo.png" height="200px" width="200px"><img class="img2" src="phones.jpg"height="200px" width="400px">
+<b><h2>Admin Mode</h2><b>
+<div class="tab">
+  <button  class="tablinks" onclick="openCity(event, 'Plans')"><h3>Add Plans</h3></button>
+    <button class="tablinks" onclick="openCity(event, 'Offers')"><h3>Add Offers</h3></button>
+  <button class="tablinks" onclick="openCity(event, 'User')"><h3>View User</h3></button>
+  <button class="tablinks" onclick="openCity(event, 'Transaction')"><h3>View Transaction</h3></button>
+  <button class="tablinks" onclick="openCity(event, 'Feedback')"><h3>View Feedback</h3></button>
+   <button class="tablinks" onclick="openCity(event, 'Logout')"> <h3>Logout</h3></button>
+  </div>
+
+  
+<div id="Plans" class="tabcontent">
+  <h3><u>Add Plan</u></h3>
+<form action="/action_page.php">
+  <input type="radio" name="gender"class="bigg" value="Monthly Unlimited"> Monthly Unlimited
+  <input type="radio" class="bigg" name="gender" value="Pay As You Go">Pay As You Go
+  <input type="radio" class="bigg"name="gender" value="Multiline"> Multi Line<br>  <br>
+  <form>
+  <p> Value: <input type="number" id ="value1"></input>
+  <p> Description: </p><textarea rows="4" cols="50" id="textarea3"></textarea>
+  
+   <p><input class="button" type="button" id="btn2" value="Add Plan"></p>
+  <p id="demo2"></p>
+   <p id="demo"></p>
+</form>
+</div>
+
+
+<div id="Offers" class="tabcontent">
+  <h3><u>Add Offers</u></h3><br>
+  <form action="/action_page.php">
+  <input type="radio" id="radio1" class="bigg" name="gender" value="Monthly Unlimited"/> Monthly Unlimited
+  <input type="radio" name="gender" class="bigg"value="Pay As You Go"/>Pay As You Go
+  <input type="radio" name="gender"class="bigg" value="Multiline"/> Multi Line<br>  <br>
+  <form>
+  <br>
+  <input class="button" type='file' onchange="readURL(this);" />
+    <img id="blah" src="#" alt="your image" />
+<input  class="button" type="button" value="upload" onclick="alert('Your pic has been uploaded')"></button>
+  <p> Description: </p><textarea rows="4" cols="50" id="textarea2"></textarea><br><br>
+  <input class="button" type="button" id="btn3" value="Add Offer">
+  <p id="demo3"></p>
+   <p id="demo4"></p>
+ 
+</form>
+</div>
+  </div>
+
+  
+  
+  <div id="Logout" class="tabcontent"><br>
+ <input class="button" type="button" onclick='window.location="Homepage.html"' value="Logout"><br><br>
+  </div>
+  
+  
+  
+<div id="User" class="tabcontent">
+  <h3><u>View User</u></h3>
+  <table  height="300px" >
+
+  <tbody>
+<tr><th>Name</th>
+<th>Address</th> 
+ <th>Mobile No.</th> 
+  <th>Email Id</th> 
+<th>Plan</th>
+<th>Payment</th></tr>
+<tr><td>Sidra</td>
+<td>12487 Jamaica Ave, Apt2</td>
+<td>9784568745</td>
+<td>saedi.kdj@yahoo.com</td>
+<td>$40</td>
+<td>Credit Card</td>
+<tr>
+<td>Bibata</td>
+<td>12584 Hillside Ave</td>
+<td>1112874568</td>
+<td>sonif.jkd@gmail.com</td>
+<td>$50</td>
+<td>Debit Card</td>
+
+</tr>
+<td>Salim</td>
+<td>11745 Springfield Blvd</td>
+<td>2845745987</td>
+<td>ddes.des@aol.com</td>
+<td>$35</td>
+<td>Credit Card</td>
+</tr>
+</table>
+</div>
+
+
+
+<div id="Transaction" class="tabcontent">
+  <h3><u>View Transactions</u></h3>
+  <form>
+  <div class="form-section ">
+				<label for="from-year" class="from-label ">Month:</label>
+
+		<select class="button" id="state-list"><br>
+			<option value="al">January</option>
+			<option value="ak">February</option>
+			<option value="az">March</option>
+			<option value="ar">April</option>
+			<option value="ca">May</option>
+			<option value="co">June</option>
+			<option value="ct">July</option>
+			<option value="de">August</option>
+			<option value="fl">Septemberr</option>
+			<option value="ia">October</option>
+			<option value="ga">November</option>
+			<option value="id">December</option>
+		</select>
+<br><br><br>
+
+
+
+<div class="main clearfix">
+			<div class="img-holder">
+			<div>
+			 
+	<img id="info-pic" src="img1/usa.jpeg" alt="USA" width="650" height="200" align="middle">
+		
+		</div>
+		<p id="info-name">January</p>
+			</div>
+		</div>
+		<div class="info-holder">
+			
+			
+		</div>
+	</div>
+</div>
+</div>
+
+			</div>
+
+		</form>
+
+</div>
+<div id="Feedback" class="tabcontent">
+  <h3>View Feedback</h3>
+   <table width="1800" height="300" >
+  <tbody>
+
+<tr><th>Name</th>
+<th>Address</th> 
+ <th>Mobile No.</th> 
+  <th>Email Id</th> 
+<th>Plan:</th>
+<th>Payment:</th>
+<th>Time:</th>
+
+<th>Date:</th>
+<th>Feedback:</th>
+
+
+<th>Contact Customer:</th></tr>
+
+<tr><td>Sidra</td>
+
+<td>12487 Jamaica Ave, Apt2</td>
+<td>9784568745</td>
+<td>saedi.kdj@yahoo.com</td>
+<td>$40</td>
+<td>Credit Card</td>
+<td>3:45 pm</td>
+<td>10/25/2018</td>
+<td>Good Network in my area.</td>
+<td><a href="mailto:someone@yahoo.com">Contact</a>
+</td>
+<tr>
+<td>Bibata</td>
+<td>12584 Hillside Ave</td>
+<td>1112874568</td>
+<td>sonif.jkd@gmail.com</td>
+<td>$50</td>
+<td>Debit Card</td>
+<td>4:50 pm</td>
+<td>11/05/2018</td>
+<td>Fast Internet Speed and great Package.</td>
+<td><a href="mailto:someone@yahoo.com">Contact</a>
+</td>
+</tr>
+<tr>
+<td>Salim</td>
+<td>11745 Springfield Blvd</td>
+<td>2845745987</td>
+<td>ddes.des@aol.com</td>
+<td>$35</td>
+<td>Credit Card</td>
+<td>9:15 am</td>
+<td>11/26/2018</td>
+<td>Call Quality is better than other Carriers.</td>
+<td><a href="mailto:someone@yahoo.com">Contact</a>
+</td>
+</tr>
+
+</table>
+</div>
+  
+  
+  <p></p>
+</div>
+
+
+
+
+</body>
+<script>
+ document.getElementById('state-list').onchange = function() {
+		var selected = this.value;
+		
+		document.getElementById('info-pic').src= 'img1/'+selected+'.jpeg';
+
+		document.getElementById('info-name').textContent = stateData[this.value].name;
+		document.getElementById('info-abbreviation').textContent = stateData[this.value].abbr;
+		document.getElementById('info-capitol').textContent = stateData[this.value].capitol;
+
+	};
+	
+
+</script>
+</html> 

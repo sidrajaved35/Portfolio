@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<title>Healthy World Cuisines</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Cardo|Cormorant+Garamond|Srisakdi" rel="stylesheet">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="css/main1.css">
+	<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+
+
+
+	
+
+
+
+
+<div class="content-wrapper">
+		<img src="cuisinelogo.png" class="logo" alt="World Cuisine Logo" >
+		<nav>
+			<ul>
+				<li><a href="#Best Cuisine">Best Cuisine</a></li>
+				<li><a href="#National Dishes">National Dish</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="hero">
+	<h1>Healthy Cuisine</h1>
+	<p>Providing lifestyle travelling culinary experience featuring fresh ingredients, easy recipes and culinary enjoyment.</p>
+</div>
+<center>
+<main role="main">
+	<div class="content-wrapper">
+		<p id="press-quote">A healthy diet is a solution to many of our health-care problems. It's the most important solution.-John Mackey</p>
+		<p>HC is committed to provide a lifestyle traveling culinary experience featuring fresh ingredients, easy recipe preparation and culinary enjoyment.
+
+Are you ready to explore new culinary frontiers, eat healthier, and save time – Then, you have come to the right place.
+
+HC features hundreds of recipes from around the globe, with quick and easy time saving steps.
+
+HC includes recipes for gluten-free, dairy-free, diabetic friendly, vegan, cardiac friendly, egg free and paleo so feel free to check out our dietary specific recipes.  <a href="#">contact&nbsp;us</a>.</p>
+		
+			
+		
+		
+		 <center>  <tr>
+      <td><img src="img1/al.jpg" alt="cuisine" width="250px" height="250px" ></td>
+      <td><img src="img1/de.jpg" alt="cuisine"width="250px" height="250px"></td>
+      <td> <img src="img1/id.jpg" alt="cuisine"width="250px" height="250px"></td>
+      
+    </tr><br>
+   <tr>
+      <td><img src="img1/hi.jpg" alt="cuisine" width="250px" height="250px"></td>
+      <td><img src="img1/usa.jpg" alt="cuisine"width="250px" height="250px"></td>
+      <td> <img src="img1/ct.jpg" alt="cuisine"width="250px" height="250px"></td>
+      
+    </tr></center>
+	<br>
+		
+We all need a little help when it comes to healthy eating and staying motivated. We are here to help and guide you through the process. Please visit our healthy tips for happiness page for inspirational posts on mindful eating, Traditional Chinese Medicine (TCM) and many other tips coming soon.
+
+So what are you waiting for? Let’s get to know each other a little bit better by signing up for our recipe newsletter to get our free recipes, healthy tips for happiness and time saving techniques right to your inbox.
+		</center>
+	</div>
+</main>
+
+<div class="outer-wrapper">
+	<header class="clearfix">
+		<h1 id="Best Cuisine">Best Cuisine</h1>
+		<select id="state-list">
+			<option value="usa">Choose Country</option>
+			<option value="al">Chinese</option>
+			<option value="ak">German</option>
+			<option value="az">Italian</option>
+			<option value="ar">Japanese</option>
+			<option value="ca">Korean</option>
+			<option value="co">Moroccan</option>
+			<option value="ct">Filipino</option>
+			<option value="de">Spanish</option>
+			<option value="fl">Tex Mex</option>
+			<option value="ia">Thai</option>
+			<option value="ga">Vietanamese</option>
+			<option value="id">Russian</option>
+			<option value="hi">Indian</option>
+
+		</select>
+	</header>
+
+	<div class="main clearfix">
+		<div class="img-holder">
+			<div>
+			 
+	<img id="info-pic" src="img1/usa.jpg" alt="USA" width="650" height="500" align="middle">
+		<p id="info-name">USA</p>
+			</div>
+		</div>
+		<div class="info-holder">
+			<p><strong>Name: </strong><span id="info-abbreviation"> Texas Barbecue</span></p>
+			<p><strong>Info: </strong><span id="info-capitol">Texas Barbecue is a traditional style of preparing meat unique to the cuisine of Texas. It is one of the many different varieties of barbecue found around the world.</span></p>
+			
+		</div>
+	</div>
+</div>
+
+<div class="outer-wrapper">
+	<div class="content-wrapper">
+		<header>
+			<h1 id="National Dishes">National Dishes</h1>
+			<p class="subtitle">Find National dishes of different Countries</p>
+		</header>
+		<main role="main">
+			<div class="first step">
+				<h2>1. Choose a Country: </h2>
+				<select name="states" id="states">
+					<option selected disabled value="empty-state">Choose Country</option>
+			<option value="al">China</option>
+			<option value="ak">Germany</option>
+			<option value="az">Italy</option>
+			<option value="ar">Japan</option>
+			<option value="ca">Korea</option>
+			<option value="co">Morocco</option>
+			<option value="ct">Filipines</option>
+			<option value="de">Spain</option>
+			<option value="ia">Thailand</option>
+			<option value="ga">Vietanam</option>
+			<option value="id">Russia</option>
+			<option value="hi">India</option>
+				</select>
+			</div>
+			<div class="second step">
+				<h2>2. National Dish: </h2>
+				<div id="postcard">
+					<p id="greeting">To Generate a National Dish Picture</p>
+					<p id="state-heading">Choose a Country</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script src="js/state-data1.js"></script>
+<script>
+	document.getElementById('state-list').onchange = function() {
+		var selected = this.value;
+		document.getElementById('info-pic').src= 'img1/'+selected+'.jpg';
+		document.getElementById('info-name').textContent = stateData[this.value].name;
+		document.getElementById('info-abbreviation').textContent = stateData[this.value].abbr;
+		document.getElementById('info-capitol').textContent = stateData[this.value].capitol;
+
+	};
+</script>
+<footer>
+
+	<p>Copyright © Healthy Cuisine</p>
+</footer>
+
+<script>
+	var quotesArray = [
+	'A healthy diet is a solution to many of our health-care problems. It is the most important solution. — John Mackey',
+	'If you maintain a healthy diet, or at least are smart about your food choices, you will still see the pounds come off. — Misty May-Treanor',
+	'Let food be thy medicine, thy medicine shall be thy food. — Hippocrates',
+	'Eat food. Not too much. Mostly plants. — Michael Pollan',
+	'The healthy man is the thin man. But you do not need to go hungry to Remove the flours, starches and sugars; that is all. — Samael Aun Weor',
+	'Juices of fruits and vegetables are pure gifts from Mother Nature and the most natural way to heal your body and make yourself whole again. — Farnoosh Brock',
+	'Food does not rank high on my list. I eat to live, and I am very particular about my diet. It is strictly low fat diet for me. — Terence Lewis'
+	];
+	var randomNumber = Math.floor(Math.random()*quotesArray.length);
+	document.getElementById('press-quote').textContent = '“' + quotesArray[randomNumber].split(' — ')[0] + '” — ' + quotesArray[randomNumber].split(' — ')[1];
+	//console.log( 	quotesArray[randomNumber].split(' — ')[0] );
+</script>
+<div  id="Contact" class="container">
+
+<h1>Contact Healthy Cuisine Magazine</h1>
+<p>We would love to hear from you!
+
+Do you have a question about a recipe?  Please leave your comment on the actual recipe as others may have the same question too.
+
+For all other questions, please use the contact form below</p>
+	<div class="form-container">
+		<form id="vol-form">
+			<div class="form-section">
+				<label for="first-name">First Name:</label>
+				<input id="first-name" name="first-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="last-name">Last Name:</label>
+				<input id="last-name" name="last-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="email">Email:</label>
+				<input id="email" name="email" type="email">
+			</div>
+			<div class="form-section">
+				<label for="phone">Phone:</label>
+				<input id="phone" name="phone" type="tel">
+			</div>
+			<div class="form-section">
+				<label for="prev-vol">Past Experience:</label>
+				<input id="prev-vol" name="prev-vol" type="text">
+			</div>
+			<div class="form-section">
+				<label for="from-year" class="from-label">From:</label>
+				<select id="from-year" name="from-year">
+			
+					<option value="blank"></option>
+					<option value="1999">Before 2000</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+				</select>
+				<label for="to-year" class="to-label">To:</label>
+				<select id="to-year" name="to-year">
+				</select>
+			</div>
+			<input id="submit" type="submit" value="Submit">
+		</form>
+	</div>
+</div>
+<footer>
+	<p>Made in NY <br>Copyright © Healthy Cuisine</p>
+</footer>
+
+<script>
+	var states = document.getElementById('states');
+
+	states.onchange = function() {
+		// console.log('state index: ' + states.selectedIndex);
+		// console.log('state name: ' + states.options[states.selectedIndex].text);
+		// console.log('img/' + states.value + '@2x.jpg');
+		document.getElementById('postcard').style.backgroundImage = 'url(img/' + states.value + '@2x.jpg)';
+		document.getElementById('greeting').innerHTML = 'National Dish of';
+		document.getElementById('state-heading').innerHTML = states.options[states.selectedIndex].text;
+	}
+</script>
+
+</body>
+</html>

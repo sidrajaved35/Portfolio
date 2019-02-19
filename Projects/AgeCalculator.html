@@ -1,0 +1,81 @@
+
+<html>
+<title>week 4</title>
+<center><fieldset style="width:500px" height:"500px">
+<head><h2>Age Calculator</h2>
+<style>
+body{
+background-image: url(http://cdn30.us1.fansshare.com/image/backgroundimage/hd-wallpapers-black-background-hd-image-website-for-website-527805647.jpg);
+background-size: 2000px 1100px;
+     border: 10px solid black;
+    outline: #4CAF50 solid 10px;
+    margin: auto;    
+    padding: 30px;
+    text-align: center;
+  background-color: lightblue;
+  font-size:20px;
+  color: white;
+}
+
+legend
+{
+  margin-bottom:0px;
+  margin-left:16px;
+}.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body >
+<p id="demo"></p>
+<br>
+<form name="AgeCalculator"><br>
+Enter your Birth year:
+<input type="number" name="Birthyear" id="Birthyear" value=""><br><br>
+
+Enter your Future year:
+<input type="number" name="Futureyear" id="Futureyear" value=""><br><br>
+
+<input type="button" class="button" value="Get your Age"onclick="Age()"></button>
+</fieldset >
+</legend>
+<br><br>
+</center>
+<center>
+<fieldset style="width:500px" height:"500px">
+<form name="LifetimeCalculator"><br>
+<h2>Lifetime Supply Calculator</h2><br>
+
+<input type="button"  class="button" value="Calculate" onclick="total()"></button>
+</fieldset>
+</form></center>
+<script>
+function Age(){
+var Birthyear  = document.forms["AgeCalculator"]["Birthyear"].value;
+var futureyear  = document.forms["AgeCalculator"]["Futureyear"].value;
+var age=futureyear-Birthyear;
+alert("I will be either " + age +" or " +(age-1)+" in "+ futureyear);
+}
+
+function total(){
+y=prompt("What is your age ", " ");
+x=prompt("Enter Your maximum age ", " ");
+z=prompt("How much snack you need per day ", " ");
+var total=(z * 365) * (x - y);
+var message="You will need "+ total+ " to last you until the ripe old age of " +x + ".";
+alert(message);
+}
+</script>
+
+</body>
+
+</html>
